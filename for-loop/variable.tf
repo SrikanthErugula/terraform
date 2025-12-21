@@ -2,6 +2,8 @@ variable "instances" {
     #default = [ "mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend" ]
 # so the above content has in list only here object type is list[]
 
+      default = [ "mongodb", "redis", "mysql" ]
+
     # default = {
     #     mongodb = "t3.micro"
     #     redis = "t3.micro"
