@@ -4,7 +4,7 @@ resource "aws_instance" "terraform" {
   vpc_security_group_ids = [aws_security_group.sg_terraform_allow.id]
 
   tags = {
-    Name = "HelloWorld"
+    Name = "terraform"
     terraform = true # it is used to know like terrform tho create chesa ani cheptundi true ani vunte 
   }
 }
