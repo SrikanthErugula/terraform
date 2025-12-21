@@ -1,5 +1,6 @@
 resource "aws_instance" "terraform" {
-  count = 4 # so here ila ivvatum valla same configuration tho 10 ec2 instance create avuthai.
+  #count = 4 # so here ila ivvatum valla same configuration tho 10 ec2 instance create avuthai.
+  count = length(var.instances)
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.sg_terraform_allow.id]
