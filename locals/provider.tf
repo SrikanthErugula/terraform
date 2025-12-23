@@ -44,9 +44,9 @@ terraform {
 
   backend "s3" {
     bucket = "dsoaws-remote-state"
-    key    = "remote-state-demo" # so here keys must be not for the same for all, u have to set name as per the requirement 
+    key    = "local-demo" # so here keys must be not for the same for all, u have to set name as per the requirement 
     region = "us-east-1"
-    use_lockfile = true
+    #use_lockfile = true
     encrypt = true
   }
 }
