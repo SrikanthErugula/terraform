@@ -4,7 +4,9 @@ variable "instances" {
 
       default = [ "mongodb", "redis", "mysql" ]
 
+# idhi on cheste ec2.tf lo need on tag chesinavi kuda on cheyali...
     # default = {
+          #each.key = each.value   
     #     mongodb = "t3.micro"
     #     redis = "t3.micro"
     #     mysql = "t3.small"
@@ -17,6 +19,7 @@ variable "instances" {
     #     redis = "t3.micro"
     #     mysql = "t3.small"
     # }
+
 }
 
 variable "zone_id" {

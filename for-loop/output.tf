@@ -4,6 +4,8 @@
 
 
 
-# so varible.tf lo variables ni declare chesinappudu manaki o/p vastundi ga so manaki edhi kavalante ahdi vastundi, 
+ /* so varible.tf lo variables ni declare chesinappudu manaki o/p vastundi ga so manaki edhi 
+kavalante ahdi vastundi, 
 
-# so ila cheyatum valla manaki oka out put vatundi it means ex 4 instace create avuthai anukundham so akkkada private vastundi     
+so ila cheyatum valla manaki oka out put vatundi it means ex 4 instace create avuthai 
+anukundham so akkkada private vastundi  */  

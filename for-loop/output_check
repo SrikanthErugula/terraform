@@ -392,4 +392,9 @@
 -- }
 
 
-/* so here mongodb, mysql... anevi each.key = each.value */
+/* so here mongodb, mysql... anevi each.key = each.value 
+
+ --> so iteration cheste mongodb treated as each.key and dhainiki
+ vachhina = after o/p atha kuda each.value avuthundhi..
+ --> so andhulo numchi emi kavalanate adhi tisukovachhu like ptivate ip or public ip
+ ---> ela ante each.value.pvtip  like these   */
