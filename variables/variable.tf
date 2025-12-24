@@ -9,7 +9,7 @@ variable "instance_type" {
   default = "t3.micro" # so after this in ec2.tf lo var.variable ani iste access avuthumdi
 }
 
-variable "ec2-tags" {
+variable "ec2-tags" { # so ikkada seee in notes
   #type = string # so here map ani vunte no error will come, or else no type vunna emi error ledhu it can understad the situation
   type = map
   default = {
@@ -40,6 +40,7 @@ variable "ingress_from_port" { # so ikkada changes chesaka ec2.tf lo update chey
 }
 
 variable "ingress_to_port" {
+    type = number # optional bcz crt ga chepte it is fine automatica ga consider chesukunttadhi 
     default = 0
 }
 

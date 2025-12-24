@@ -1,10 +1,10 @@
 resource "aws_instance" "terraform" {
   ami           = "ami-09c813fb71547fc4f"
-  instance_type = var.environment == "dev" ? "t3.micro" : "t3.medium"
+  instance_type = var.environment == "dev" ? "t3.micro" : "t3.medium" # see in vars.tf file
   vpc_security_group_ids = [aws_security_group.sg_terraform_allow.id]
 
   tags = {
-    Name = "HelloWorld"
+    Name = "terraform"
     terraform = true # it is used to know like terrform tho create chesa ani cheptundi true ani vunte 
   }
 }
