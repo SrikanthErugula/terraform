@@ -11,3 +11,5 @@ terraform {
 provider "aws" {
   # Configuration options
 }
+
+# --> provider.tf --- so here manam cheptunam dheniki connect avvali ani, its mandatory for terraform
