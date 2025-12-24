@@ -11,6 +11,7 @@ variable "instance_type" {
 
 variable "ec2-tags" {
   #type = string # so here map ani vunte no error will come, or else no type vunna emi error ledhu it can understad the situation
+  type = map
   default = {
      Name = "HelloWorld_demo"
      Terraform = "true"
