@@ -1,16 +1,16 @@
 
 variable "project" {
-    default = "sriroboshop"
+    default = "sri-cart"
 }
 
 variable "environment"{
-    default = "DEV"
+    default = "dev"
 }
 
 # variable "common_name" {
 #     default = "${var.project}-${var.environment}"
 # }  # so clearly said here you can use variables inside locals. but we can't use one variable in another variable
-
+# error mentioned in own doc there is available u can see there
 
 variable "ami_id" {
   #description = "The AWS instance type to use" # it used to know what is it and where it it used for our understand purpose
@@ -26,17 +26,20 @@ variable "ami_id" {
 # so here insted of this we have to local.tf for t3.micro value kosam.....
 
 
-variable "common_tags" {
+variable "common_tags" { 
   #type = string # so here map ani vunte no error will come, or else no type vunna emi error ledhu it can understad the situation
   type = map
   default = {
-     #Name = "HelloWorld_demo"
+     #Name = "terraform-demo-local"
      Terraform = "true"
      Project = "sriroboshop"
-     ENV = "DEV"
+     ENV = "dev"
 
   }
+  # so here ila tags name enni resources ki ayina ivvachu and dheniki ayina ivvachu
+  # ec2.tf lo tags lo access chessukovachu u can see there  
 }
+
 
 variable "sg_name" {
     type = string

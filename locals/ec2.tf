@@ -1,13 +1,20 @@
 resource "aws_instance" "terraform" {
   ami           = local.ami_id # here values updated in variable.tf lo ikkada access chestunnam anthe
+  #ami = var.ami_id # while use var.tf file we can use this
   instance_type = local.instance_type # here values updated in local.tf lo ikkada access chestunnam anthe
   vpc_security_group_ids = [aws_security_group.sg_terraform_allow.id]
 
   tags = local.ec2_tags
+  #tags = var.common_tags
+# {
+#   name = "terraform"
+#   Terraform = true
+#   }
 }
 
 resource "aws_security_group" "sg_terraform_allow" {
-  name   = "${local.common_name}-sg-terraform-allow" # names anevi alredy exist ayyi vunte delete chesi or vere names ivvali
+  #name = var.sg_name # while use var.tf file we can use this
+  #name   = "${local.common_name}-sg"# see in notes 
   #vpc_id = aws_vpc.example.id # no need bcz it will take direct it from default
 
   egress {
@@ -25,11 +32,14 @@ resource "aws_security_group" "sg_terraform_allow" {
     cidr_blocks      = var.cidr # from internet
     
   }
-
+     #tags = "${local.common_name}-sg"
+     #local.common_name
+    #"${local.common_name}-sg-terraform-allow" ila pedithe error vastundi
   tags = {
-    name   = "${local.common_name}-sg-terraform-allow"
-  }
-}
+    #name   = "${local.common_name}-sg-terraform-allow"
+    name = var.sg_name # while use var.tf file we can use this
+} 
+} 
 # within {} we called as map or object 
 
 ## Comment
