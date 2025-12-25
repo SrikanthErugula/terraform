@@ -14,7 +14,7 @@ resource "aws_instance" "terraform" {
 
 resource "aws_security_group" "sg_terraform_allow" {
   #name = var.sg_name # while use var.tf file we can use this
-  #name   = "${local.common_name}-sg"# see in notes 
+  name   = "${local.common_name}-sg"# see in notes 
   #vpc_id = aws_vpc.example.id # no need bcz it will take direct it from default
 
   egress {
@@ -38,7 +38,7 @@ resource "aws_security_group" "sg_terraform_allow" {
   tags = {
     #name   = "${local.common_name}-sg-terraform-allow"
     name = var.sg_name # while use var.tf file we can use this
-} 
+  } 
 } 
 # within {} we called as map or object 
 

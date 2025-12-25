@@ -10,6 +10,7 @@ resource "aws_instance" "terraform" {
 
    provisioner "local-exec"{
       command = "echo ${self.private_ip} > inventory"
+      #command = " echo instances created "
       on_failure = continue # see notes
     }
 

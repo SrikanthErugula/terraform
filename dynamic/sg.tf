@@ -1,6 +1,8 @@
 resource "aws_security_group" "roboshop_instance" {
   name   = "roboshop-strict-sg"
 
+# It is like as a block
+
   egress { # out ... # it is  called block
     from_port        = 0 # from port 0 to to port 0 means all ports
     to_port          = 0 
@@ -24,3 +26,7 @@ resource "aws_security_group" "roboshop_instance" {
   }
 
 }
+
+# instead of ingress name mana istum emi name ayina ivvachu adi ela ante
+# dynamic block ingress ani name ichahru so we have to take that name only
+# finaly so whatever name it has that name u can take
