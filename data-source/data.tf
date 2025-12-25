@@ -1,19 +1,45 @@
+# */ data "aws_ami" "example" {
+#   executable_users = ["self"]
+#   most_recent      = true
+#   name_regex       = "^myami-[0-9]{3}"  no need
+#   owners           = ["self"]
+
+#   filter {
+#     name   = "name"
+#     values = ["myami-*"]
+#   }
+
+#   filter {
+#     name   = "root-device-type"
+#     values = ["ebs"]
+#   }
+
+#   filter {
+#     name   = "virtualization-type"
+#     values = ["hvm"]
+#   }
+# }
+# */
+
+# the above is syntax 
+
+
 data "aws_ami" "joindevops" {
-    owners           = ["973714476881"] # so this value comes from ec2 server amiis->owner id
-    most_recent      = true
+    owners           = ["973714476881"] # see in my own word doc 
+    most_recent      = true # latest ami kavali ani cheptunnam 
 
     filter {
         name   = "name"
-        values = ["RHEL-9-DevOps-Practice"]
+        values = ["RHEL-9-DevOps-Practice"] # see in my own word doc 
     }
     filter {
         name   = "root-device-type"
-        values = ["ebs"]
+        values = ["ebs"] # see in my own word doc 
     }
 
     filter {
         name   = "virtualization-type"
-        values = ["hvm"]
+        values = ["hvm"] # see in my own word doc 
     }
 }
 
@@ -36,11 +62,11 @@ output "redis_info" {
 
 # # EX:1
 
-# data "aws_instance" "mysql" {
-#     instance_id = "i-059a4e0c9a242f78d"
+# data "aws_instance" "manual" {
+#  instance_id =  = "i-0320a694dbc8631b3"
 # }
 
-# output "mysql_info" {
+# output "manual_info" {
 #   #value = data.aws_instance.mysql.private_ip
-#   value = data.aws_instance.mysql.public_ip
+#   value = data.aws_instance.manual.private_ip
 # }

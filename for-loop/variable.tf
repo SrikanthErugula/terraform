@@ -2,7 +2,7 @@ variable "instances" {
     #default = [ "mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend" ]
 # so the above content has in list only here object type is list[]
 
-      default = [ "mongodb", "redis", "mysql" ]
+      default = [ "mongodb", "redis"]#, "mysql" ]
 
 # idhi on cheste ec2.tf lo need on tag chesinavi kuda on cheyali...
     # default = {

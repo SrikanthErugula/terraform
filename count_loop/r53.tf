@@ -1,5 +1,5 @@
 resource "aws_route53_record" "roboshop" {
-  count = length(var.instances) # so length oka function
+  count = length(var.instances) # so length oka function see in notes for deatiled
   #count = 4
   zone_id = "${var.zone_id}"
   name    = "${var.instances[count.index]}.${var.domain_name}" # mongodb.daws86s.fun

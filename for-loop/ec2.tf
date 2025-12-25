@@ -1,9 +1,10 @@
 resource "aws_instance" "terraform" {
     #for_each = var.instances # see notes # need on 
-    for_each = toset(var.instances)
+    for_each = toset(var.instances) # see in notes
     ami = "ami-09c813fb71547fc4f"
     #instance_type = each.value # need on 
-    instance_type = "t3.micro"
+    
+    instance_type = "t3.micro" # so all items ki same kabbati we need to access directly 
     vpc_security_group_ids = [aws_security_group.allow_all.id]
     tags = {
         #Name = each.key # mongodb, mysql, redis..... etc # need on 
