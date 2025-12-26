@@ -21,7 +21,7 @@
 # }
 # */
 
-# the above is syntax 
+# the above is doc syntax.....
 
 
 data "aws_ami" "joindevops" {
@@ -47,13 +47,13 @@ output "ami_id" {
     value = data.aws_ami.joindevops.id # see in notes
 }
 
-data "aws_instance" "redis" { 
-    instance_id = "i-07d284289d1e5a63d"  # so ikkada query cheyanlante edho okati kavali kabbati we need instance id
-}
+# data "aws_instance" "redis" {  # here redis created by manual without using terraform
+#     instance_id = "i-07d284289d1e5a63d"  # so ikkada query cheyanlante edho okati kavali kabbati we need instance id
+# }
 
-output "redis_info" {
-    value = data.aws_instance.redis.public_ip
-}
+# output "redis_info" { # so manual serevr vi kuda data ni query cheyachu...
+#     value = data.aws_instance.redis.public_ip
+# }
 
 # so here existing info or data ni query cheyatum ila, very easy process 
 
