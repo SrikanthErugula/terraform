@@ -11,7 +11,7 @@ resource "aws_instance" "terraform" {
    provisioner "local-exec"{
       command = "echo ${self.private_ip} > inventory"
       #command = " echo instances created "
-      on_failure = continue # see notes
+      #on_failure = continue # see notes
     }
 
 # here provisinor by default creation time lone run avuthundi....
@@ -46,7 +46,7 @@ resource "aws_instance" "terraform" {
       when = destroy
     }
 
-}
+ }
 
 resource "aws_security_group" "sg_terraform_allow" {
   name   = "sg_terraform_allow" # names anevi alredy exist ayyi vunte delete chesi or vere names ivvali
