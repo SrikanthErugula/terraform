@@ -4,7 +4,7 @@ resource "aws_instance" "tfstart" {
   vpc_security_group_ids = [aws_security_group.sg_tfstart_allow.id] # see in notes
 
   tags = {
-    Name = "terraform-dev"
+    Name = "tfstart"
     terraform = true # it is used to know like terrform tho create chesa ani cheptundi true ani vunte 
   }
 } # so upto here instances or server create avuthai based on above code 
