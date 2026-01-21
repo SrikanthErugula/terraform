@@ -1,7 +1,7 @@
-resource "aws_instance" "terraform" {
+resource "aws_instance" "tfstart" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.micro"
-  vpc_security_group_ids = [aws_security_group.sg_terraform_allow.id] # see in notes
+  vpc_security_group_ids = [aws_security_group.sg_tfstart_allow.id] # see in notes
 
   tags = {
     Name = "terraform-dev"
@@ -10,7 +10,7 @@ resource "aws_instance" "terraform" {
 } # so upto here instances or server create avuthai based on above code 
 
 # It is like as a block
-resource "aws_security_group" "sg_terraform_allow" {
+resource "aws_security_group" "sg_tfstart_allow" {
   name   = "sg_terraform_allow" # names anevi alredy exist ayyi vunte delete chesi or vere names ivvali
   #vpc_id = aws_vpc.example.id # no need bcz it will take direct it from default
 
