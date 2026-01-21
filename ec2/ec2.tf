@@ -7,7 +7,7 @@ resource "aws_instance" "terraform" {
     Name = "terraform-dev"
     terraform = true # it is used to know like terrform tho create chesa ani cheptundi true ani vunte 
   }
-} # so ikkada instances or server create avuthai based on above code 
+} # so upto here instances or server create avuthai based on above code 
 
 # It is like as a block
 resource "aws_security_group" "sg_terraform_allow" {
@@ -36,5 +36,3 @@ resource "aws_security_group" "sg_terraform_allow" {
   }
 }
 # within {} we called as map or object 
-
-## Comment
