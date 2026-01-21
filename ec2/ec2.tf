@@ -1,5 +1,5 @@
 resource "aws_instance" "tfstart" {
-  ami           = "ami-09c813fb71547fc4f"
+  ami           = "ami-0220d79f3f480ecf5"
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.sg_tfstart_allow.id] # see in notes
 
