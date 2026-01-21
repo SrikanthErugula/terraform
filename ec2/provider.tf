@@ -12,4 +12,4 @@ provider "aws" {
   # Configuration options
 }
 
-# --> provider.tf --- so here manam cheptunam dheniki connect avvali ani, its mandatory for terraform
+# --> provider.tf --- so it tells cheptunam dheniki connect avvali ani, its mandatory for terraform
