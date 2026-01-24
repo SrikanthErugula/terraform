@@ -24,21 +24,21 @@ resource "aws_instance" "terraform" {
 # so intha varaku run cheste automatic ga inventoy file create ayyi andhuloki private ip vastundhi....
 # enni local exec ayina kuda ivvachu
 
-    connection { # see in notes
+    connection { # for connecting in browser with the below credentials
       type     = "ssh"
       user     = "ec2-user"
       password = "DevOps321"
       host     = self.public_ip
     }
 
-    provisioner "remote-exec" {
+    provisioner "remote-exec" { # this is for server creation code
       inline = [
         "sudo dnf install nginx -y",
         "sudo systemctl start nginx"
       ]
     }
 
-    provisioner "remote-exec" {
+    provisioner "remote-exec" { # this is for server stopping code
       inline = [
         "sudo systemctl stop nginx",
         "echo 'successfully stopped nginx server' "

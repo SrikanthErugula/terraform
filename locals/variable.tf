@@ -32,7 +32,7 @@ variable "common_tags" {
   default = {
      #Name = "terraform-demo-local"
      Terraform = "true"
-     Project = "sriroboshop"
+     Project = "sri-cart"
      ENV = "dev"
 
   }
