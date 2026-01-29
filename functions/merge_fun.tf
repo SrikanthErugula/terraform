@@ -19,19 +19,19 @@
 
 # EX : 2
 
-# locals {
-#   map1 = {
-#     a = "apple"
-#     b = "banana"
-#   }
-#   map2 = {
-#     b = "blueberry"
-#     c = "cherry"
-#   }
-#   merged_map = merge(local.map1, local.map2)
-# }
+locals {
+  map1 = {
+    a = "apple"
+    b = "banana"
+  }
+  map2 = {
+    b = "blueberry"
+    c = "cherry"
+  }
+  merged_map = merge(local.map1, local.map2)
+}
 
-# output "merged_map_result" {
-#   // Result: { a = "apple", b = "blueberry", c = "cherry" }
-#   value = local.merged_map
-# }
+output "merged_map_result" {
+  // Result: { a = "apple", b = "blueberry", c = "cherry" }
+  value = local.merged_map
+}
