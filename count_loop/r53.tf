@@ -10,3 +10,4 @@ resource "aws_route53_record" "roboshop" {
 }
 
 #  records = [aws_instance.terraform[count.index]  ----> see notes  for detailed 
+
