@@ -1,6 +1,6 @@
 
 variable "project" {
-    default = "sri-cart"
+    default = "sri-cart-demo"
 }
 
 variable "environment"{
