@@ -1,19 +1,19 @@
 data "aws_ami" "joindevops" {
-    owners           = ["973714476881"] # so this value comes from ec2 server amiis->owner id
-    most_recent      = true
+    owners           = ["973714476881"] 
+    most_recent      = true # latest ami kavali ani cheptunnam 
 
     filter {
         name   = "name"
-        values = ["RHEL-9-DevOps-Practice"]
+        values = ["Redhat-9-DevOps-Practice"] 
     }
     filter {
         name   = "root-device-type"
-        values = ["ebs"]
+        values = ["ebs"]  
     }
 
     filter {
         name   = "virtualization-type"
-        values = ["hvm"]
+        values = ["hvm"]  
     }
 }
 

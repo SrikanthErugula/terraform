@@ -15,7 +15,7 @@ variable "environment"{
 variable "ami_id" {
   #description = "The AWS instance type to use" # it used to know what is it and where it it used for our understand purpose
   type =  string
-  default     = "ami-09c813fb71547fc4f" # so after this in ec2.tf lo var.variable ani iste access avuthumdi
+  default     = "ami-0220d79f3f480ecf5" # so after this in ec2.tf lo var.variable ani iste access avuthumdi
 }
 
 # variable "instance_type" {

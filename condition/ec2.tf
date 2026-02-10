@@ -1,5 +1,5 @@
 resource "aws_instance" "terraform" {
-  ami           = "ami-09c813fb71547fc4f"
+   ami           =  "ami-0220d79f3f480ecf5" #"ami-09c813fb71547fc4f"
   instance_type = var.environment == "dev" ? "t3.micro" : "t3.medium" # see in vars.tf file
   vpc_security_group_ids = [aws_security_group.sg_terraform_allow.id]
 

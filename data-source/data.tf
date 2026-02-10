@@ -30,7 +30,7 @@ data "aws_ami" "joindevops" {
 
     filter {
         name   = "name"
-        values = ["RHEL-9-DevOps-Practice"] # see in my own word doc 
+        values = ["Redhat-9-DevOps-Practice"] # see in my own word doc 
     }
     filter {
         name   = "root-device-type"
