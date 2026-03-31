@@ -4,9 +4,9 @@ variable "instances" {
 }
 
 variable "zone_id" {
-    default = "Z08113913KWDT82RCNFTV"
+    default = "Z04684822ZHOD2IE49OQC"
 }
 
 variable "domain_name" {
-    default = "devops.fun"
+    default = "dsoaws.fun"
 }

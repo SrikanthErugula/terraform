@@ -14,7 +14,7 @@ variable "ec2-tags" { # so ikkada seee in notes
   #type = string # so here map ani vunte no error will come, or else no type vunna emi error ledhu it can understad the situation
   type = map
   default = {
-     Name = "HelloWorld_demo"
+     Name = "HelloWorld_demo_vars"
      Terraform = "true"
      Project = "SRI"
      ENV = "DEV"
@@ -24,7 +24,7 @@ variable "ec2-tags" { # so ikkada seee in notes
 
 variable "sg_name" {
     type = string
-    default = "sg_terraform_allow"
+    default = "sg_terraform_allow" # it will disaplyed at sg-grp-name section 
 
     # optional to inform what is this variable about
     description = " Security group name to attach to EC2 instance" # this is for our understand 
