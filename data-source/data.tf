@@ -47,12 +47,14 @@ output "ami_id" {
     value = data.aws_ami.joindevops.id # see in notes
 }
 
-# data "aws_instance" "redis" {  # here redis created by manual without using terraform
-#     instance_id = "i-07d284289d1e5a63d"  # so ikkada query cheyanlante edho okati kavali kabbati we need instance id
+# so below laga sri ani oka server create chesi we can query any data form that server
+
+# data "aws_instance" "sri" {  # here redis created by manual without using terraform
+#     instance_id = "i-062ac1f30c8fb64f7"  # so ikkada query cheyanlante edho okati kavali kabbati we need instance id
 # }
 
-# output "redis_info" { # so manual serevr vi kuda data ni query cheyachu...
-#     value = data.aws_instance.redis.public_ip
+# output "sri_info" { # so manual serevr vi kuda data ni query cheyachu...
+#     value = data.aws_instance.sri.root_block_device 
 # }
 
 # so here existing info or data ni query cheyatum ila, very easy process 

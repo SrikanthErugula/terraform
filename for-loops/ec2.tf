@@ -48,7 +48,7 @@ resource "aws_instance" "terraform" {
     instance_type = "t3.micro" # so all items ki same kabbati we need to access directly 
     vpc_security_group_ids = [aws_security_group.allow_all.id]
     tags = {
-        Name = each.value
+        Name = each.value  # here for_each lo toset ani iste we need to use each.value bcz all vakues under each.value lo vunttai 
         Terraform = "true"
     }
 }
