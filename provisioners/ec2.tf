@@ -24,7 +24,7 @@ resource "aws_instance" "terraform" {
 # so intha varaku run cheste automatic ga inventoy file create ayyi andhuloki private ip vastundhi....
 # enni local exec ayina kuda ivvachu
 
-    connection { # for connecting in browser with the below credentials
+    connection { # for SSH connection in browser with the below credentials
       type     = "ssh"
       user     = "ec2-user"
       password = "DevOps321"
