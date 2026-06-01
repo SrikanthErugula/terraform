@@ -1,7 +1,7 @@
 resource "aws_instance" "tf_re" {
   ami           =  "ami-0220d79f3f480ecf5" #"ami-09c813fb71547fc4f" 
   instance_type = "t3.micro"
-  vpc_security_group_ids = [aws_security_group.sg.id] # see in notes
+  vpc_security_group_ids = [aws_security_group.sg_re.id] # see in notes
 
   tags = {
     Name = "terraform-tag"
