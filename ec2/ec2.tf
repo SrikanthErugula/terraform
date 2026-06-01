@@ -36,3 +36,6 @@ resource "aws_security_group" "sg_re" {
   }
 }
 # within {} we called as map or object 
+
+# Security Group Name is the actual AWS resource name assigned when the security group is created.
+# Name is a user-defined tag (Name tag) used for identification and organization in the AWS Console.

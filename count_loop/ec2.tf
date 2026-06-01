@@ -36,5 +36,3 @@ resource "aws_security_group" "sg_terraform_allow" {
   }
 }
 # within {} we called as map or object 
-
-## Comment
