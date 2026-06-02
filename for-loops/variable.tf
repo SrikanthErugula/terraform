@@ -1,15 +1,15 @@
 # variable "instances" {
-#     default = [ "mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend" ]
+#     # default = [ "mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend" ]
 # # so the above content has in list only here object type is list[]
 
 
 # #idhi on cheste ec2.tf lo need on tag chesinavi kuda on cheyali...
-#     default = {
-#           each.key = each.value   
-#         mongodb = "t3.micro"
-#         redis = "t3.micro"
-#         mysql = "t3.small"
-#     } #..................... # so here object type is map {}
+#     # default = {
+#     #       each.key = each.value   
+#     #     mongodb = "t3.micro"
+#     #     redis = "t3.micro"
+#     #     mysql = "t3.small"
+#     # } #..................... # so here object type is map {}
 #     default = {
 #         mongodb = {
 #             instance_type = "t3.micro"
@@ -30,8 +30,6 @@
 
 ################ for-loop lo map situation  ############
 # variable "instances" {
-#     #default = [ "mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart" ] 
-
 #              default = {   
 #         mongodb = "t3.micro"
 #         redis = "t3.micro"

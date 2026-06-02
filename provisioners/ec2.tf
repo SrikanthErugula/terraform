@@ -8,7 +8,7 @@ resource "aws_instance" "terraform" {
     terraform = true # it is used to know like terrform tho create chesa ani cheptundi true ani vunte 
   }
 
-   provisioner "local-exec"{
+    provisioner "local-exec"{
       command = "echo ${self.private_ip} > inventory"
       #command = " echo instances created "
       on_failure = continue # see notes
@@ -17,7 +17,7 @@ resource "aws_instance" "terraform" {
 # here provisinor by default creation time lone run avuthundi....
 # if u want run in destroy time u can use the below cmd as well
 
-     provisioner "local-exec"{
+    provisioner "local-exec"{
       command = "echo Instance is destroyed"
       when    = destroy
     }

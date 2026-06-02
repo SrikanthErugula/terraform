@@ -43,7 +43,7 @@
 
 
 resource "aws_instance" "terraform" {
-    for_each = toset(var.instances) # 
+    for_each = toset(var.instances) 
     ami = "ami-0220d79f3f480ecf5"
     instance_type = "t3.micro" # so all items ki same kabbati we need to access directly 
     vpc_security_group_ids = [aws_security_group.allow_all.id]
